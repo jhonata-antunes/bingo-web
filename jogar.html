@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Bingo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-inverse">
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Bingo Antunes</a></li>
+                    <li><a href="jogar.html" id="jogarId">Jogar</a></li>
+                    <li><a href="ajuda.html" id="ajudaId">Ajuda</a></li>
+                    <li><a href="sobre.html" id="sobreId">Sobre</a></li>
+                <ul>
+            <div>
+        </nav>
+    <div>
+
+    <div class="col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">Sorteio manual</div>
+            <div class="panel-body">
+                <div class="col-md-4">
+                    <div>
+                        <button type="button" class="btn btn-primary" onclick="nextManualButton()" id="nextManualButtonId">
+                            <samp class="glyphicon glyphicon-arrow-right"></samp>
+                        </button>
+                        <button type="button" class="btn btn-primary" onclick="resetButton()" id="resetButton1Id">
+                            <span class="glyphicon glyphicon-refresh"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group" style="visibility: hidden;">
+                        <select class="form-control">
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">Sorteio Automático</div>
+            <div class="panel-body">
+                <div class="col-md-4">
+                    <div>
+                        <button type="button" class="btn btn-primary" onclick="playButton()" id="playButtonId">
+                            <samp class="glyphicon glyphicon-play"></samp>
+                        </button>
+                        <button type="button" class="btn btn-primary" onclick="pauseButton()" id="pauseButtonId">
+                            <span class="glyphicon glyphicon-pause"></span>
+                        </button>
+                        <button type="button" class="btn btn-primary" onclick="resetButton()" id="resetButton2Id">
+                            <span class="glyphicon glyphicon-refresh"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <p><b>Intervalo de Tempo</b></p>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <select class="form-control" id="selectTimeId">
+                            <option>0.5</option>
+                            <option>1.0</option>
+                            <option>1.5</option>
+                            <option selected="selected">2.0</option>
+                            <option>2.5</option>
+                            <option>3.0</option>
+                            <option>3.5</option>
+                            <option>4.0</option>
+                            <option>4.5</option>
+                            <option>5.0</option>
+                            <option>5.5</option>
+                            <option>6.0</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">Informações</div>
+            <div class="panel-body">
+                <div class="col-md-5">
+                    <b>Números restantes: <font id="remainingId">x</font></b>
+                </div>
+                <div class="col-md-5">
+                    <b>Número de partidas: <font id="gameId">y</font></b>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group" style="visibility: hidden;">
+                        <select class="form-control"></select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">Validação de vitória</div>
+            <div class="panel-body">
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-primary" onclick="listNumbersButton()" id="listNumbersButtonId">Listar números</button>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <select class="form-control" id="selectId"></select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12"  >
+        <div class="well-lg" style="background-color: #337ab7">
+            <font color="red" style="font-size: 200px"><p align="center" style="margin-top: -60px; margin-bottom: -60px" id="numberId">00</p></font>
+        </div>
+    </div>
+
+    <script src="bingo.min.js"></script>
+</body>
+</html>
